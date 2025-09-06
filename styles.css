@@ -25,7 +25,7 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  background-color: #a7d0f0; /* Soft light blue for a fresh look */
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -45,11 +45,11 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('https://media.meer.com/attachments/5e67a1a194cd2b154fe544174b4be6b81d74c53e/store/fill/1230/692/38aead173b33d731064c5ad428c36b6db0ed6ce7d9ca45d23f2773c20745/How-safe-is-drinking-water.jpg');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
+  color: #ffffff;                 /* White text for contrast */
   text-align: center;          /* Center the text */
   padding: 60px 20px;          /* Add space above and below */
   border-radius: 0 0 16px 16px; /* Only round bottom corners */
@@ -57,9 +57,13 @@ section {
   /* Add a dark overlay for better text readability */
   /* This uses a simple linear-gradient overlay */
   background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+  background-color: #9ad6f8; /* Blue overlay */
 }
 
+/* Change the color of only the first headline in the hero section */
+.hero h1 {
+  color: #f7e19a; /* Primary Yellow */
+}
 /* Make the headline bold and modern */
 .hero h1 {
   font-size: 2.5em;
@@ -86,14 +90,14 @@ section {
 
 /* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
+  color: #29B5e5; /* Primary blue */
   margin-top: 0;
   font-weight: bold;
 }
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
+  background-color: #f8d662; /* Primary Yellow */
   color: #222;
   text-align: center;
   padding: 30px 20px;
@@ -105,29 +109,33 @@ h2 {
   max-width: 320px;
   border-radius: 10px;
   margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Donate Button Styles */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
+  background-color: #25b9e5; /* Green */
+  color: #E0d9cf;
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   font-size: 1.1em;
   margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
+  box-shadow: 0 2px 8px #385cc3;
   transition: background 0.3s, transform 0.2s;
   border: none;
   cursor: pointer;
 }
 
+/* Change the color of only the "Our Impact" Header */
+.impact-story h2 {
+  color: #eea94f; /* Dark Green */
+}
 /* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
+  background-color: #21a3d3; /* Dark Green */
   transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
@@ -194,5 +202,33 @@ section {
 
   .impact-image {
     width: 300px;
+  }
+
+  /* Glowing effect for the main headline in the hero section */
+  .hero h1 {
+    text-shadow: 0 0 12px #FFC907; 
+  }
+}
+/* Make the donate button pulse gently to draw attention */
+.donate-button {
+  animation: pulse 2s infinite;
+}
+/*Make the donate button pop when hovered */
+.donate-button:hover {
+  animation: pop 0.3s forwards;
+}
+/* Make image zoom in a little when hovered */
+img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px #2e9df755;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+/* Add a bounce effect to the donate button when hovered */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
