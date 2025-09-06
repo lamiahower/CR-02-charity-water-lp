@@ -7,9 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Sidebar Menu Button -->
+  <button class="menu-btn" onclick="openSidebar()">Menu</button>
+  <!-- Sidebar Navigation Panel -->
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <ul>
+      <li class="dropdown">
+        <a href="#about" class="dropbtn">About Us</a>
+        <div class="dropdown-content">
+          <a href="#mission">Our Mission</a>
+          <a href="#team">Our Team</a>
+          <a href="#history">History</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#volunteer" class="dropbtn">Volunteer</a>
+        <div class="dropdown-content">
+          <a href="#opportunities">Opportunities</a>
+          <a href="#signup">Sign Up</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#give" class="dropbtn">How to Give</a>
+        <div class="dropdown-content">
+          <a href="#donate">Donate</a>
+          <a href="#fundraise">Fundraise</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#join" class="dropbtn">How to Join</a>
+        <div class="dropdown-content">
+          <a href="#membership">Membership</a>
+          <a href="#newsletter">Newsletter</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#events" class="dropbtn">Events</a>
+        <div class="dropdown-content">
+          <a href="#upcoming">Upcoming Events</a>
+          <a href="#past">Past Events</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#news" class="dropbtn">News</a>
+        <div class="dropdown-content">
+          <a href="#latest">Latest News</a>
+          <a href="#press">Press Releases</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // Simple sidebar open/close functions
+    function openSidebar() {
+      document.getElementById('sidebar').style.left = '0';
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').style.left = '-260px';
+    }
+  </script>
   <!-- Company Logo Banner -->
   <!-- This is a skinny bar at the very top, not a whole page -->
-   <div class="top-banner">
+  <div class="top-banner">
     <img src="https://images.seeklogo.com/logo-png/61/2/charity-water-logo-png_seeklogo-618081.png"
           alt="Charity Water Logo" class="logo">
     <style>
@@ -34,7 +94,7 @@
     <!-- Real-World Impact Story Section -->
     <section class="impact-story">
         <!-- Section headline -->
-        <h2>Our Impact</h2>
+        <h2 class="section-header impact-header">Our Impact</h2>
         <!-- Container for image and text -->
         <div class="impact-content">
             <!-- Impact image -->
@@ -60,7 +120,7 @@
 
     <!-- Call-to-Action Section: This encourages visitors to take action -->
     <section class="call-to-action">
-        <h2>Help Us Make a Difference</h2>
+        <h2 class="section-header">Help Us Make a Difference</h2>
         <p>Your gift has the power to change lives. Every donation helps bring clean water to families in need and brings us closer to a world where everyone can drink safely.</p>
         <a href="#" class="donate-button">Donate Now!</a>
     </section>
